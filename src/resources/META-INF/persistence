@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0"
+             xsi:schemalocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+
+    <persistence-unit name="orm" transaction-type="RESOURCE_LOCAL">
+
+        <class>course4.entity.Alphinist</class>
+        <class>course4.entity.Mountain</class>
+        <class>course4.entity.Groups</class>
+        <class>course4.entity.Id</class>
+        <class>course4.Application</class>
+
+
+        <properties>
+
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/course4"/>
+            <property name="jakarta.persistence.jdbc.user" value="evg"/>
+            <property name="jakarta.persistence.jdbc.password" value="evg"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="eclipselink.connection-pool.default.initial" value="5"/>
+            <property name="eclipselink.connection-pool.default.min" value="3"/>
+            <property name="eclipselink.connection-pool.default.max" value="10"/>
+
+            <property name="eclipselink.cache.shared.default" value="false"/>
+
+        </properties>
+    </persistence-unit>
+</persistence
